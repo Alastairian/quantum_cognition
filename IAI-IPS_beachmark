@@ -1,0 +1,39 @@
+IAI-IPS Benchmark Auto-Report Generator
+
+import datetime
+
+Read benchmark_test_report.log
+
+def generate_report(): now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") with open("benchmark_test_report.log", "r") as log_file: log_content = log_file.read()
+
+# Create Markdown report
+report_md = f"""# IAI-IPS Benchmark Report
+
+Generated: {now}
+
+
+---
+
+Raw Test Output
+
+{log_content}
+
+
+---
+
+Summary
+
+Review the raw logs for detailed results.
+
+Ensure all tests pass for consciousness-layer benchmarks.
+
+Use this report in lab documentation and weekly meetings.
+
+
+"""
+
+with open("iai_ips_benchmark_report.md", "w") as report_file:
+    report_file.write(report_md)
+
+if name == "main": generate_report() print("✅ IAI-IPS Benchmark Report generated: iai_ips_benchmark_report.md")
+
