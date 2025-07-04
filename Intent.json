@@ -1,0 +1,5 @@
+{
+  "intent": "focus_on_entanglement",
+  "context": "high_attention_level",
+  "expected_activation": true
+}
