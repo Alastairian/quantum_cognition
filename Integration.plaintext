@@ -1,0 +1,2 @@
+DECLARE QuantumNeuralLink QNL1 WITH aspects($\Psi_C$ vs. $\Psi_D$) FOR Pattern($\mathcal{P}_{\text{attention}}$);
+IF $\mathcal{L}_{\text{error}}$ (QNL1.fidelity < threshold) THEN $\Pi$.send($\mathcal{M}_{\text{unease}}$);
