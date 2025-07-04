@@ -1,1 +1,2 @@
 .github/workflows/deploy_docs.yml
+pip install mkdocstrings[python]
