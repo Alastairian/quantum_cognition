@@ -1,0 +1,5 @@
+{
+  "problem": "maximize_entanglement_fidelity",
+  "iterations": 5,
+  "expected_outcome": "fidelity_above_0.85"
+}
