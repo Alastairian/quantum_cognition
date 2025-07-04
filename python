@@ -1,0 +1,15 @@
+from iai_ips_symbolic_system import execute_statement, TwineCognitionManager
+
+context = {'twine': TwineCognitionManager()}
+statements = [
+    "DECLARE QuantumNeuralLink QNL1",
+    "DECLARE QuantumNeuralLink QNL2",
+    "ENTANGLE QNL1 QNL2",
+    "MEASURE QNL1",
+    "ACTIVATE attention_pattern",
+    "SWITCHMODE P",
+    "CHECKFIDELITY QNL1 0.8"
+]
+
+for stmt in statements:
+    execute_statement(stmt, context)
