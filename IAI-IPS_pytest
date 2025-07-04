@@ -1,0 +1,49 @@
+pytest-compatible test harness for IAI-IPS Consciousness Benchmarking
+
+import json import pytest from iai_ips_code_scaffold import execute_statement, state
+
+Load benchmark datasets
+
+def load_benchmark_dataset(): with open("tests/data/iai_ips_benchmark_datasets.json", "r") as f: return json.load(f)
+
+Test Intent Patterns
+
+@pytest.mark.parametrize("case", load_benchmark_dataset()["intent_patterns"]) def test_intent_patterns(case): intent = case["intent"] context = case["context"] expected = case["expected_activation"]
+
+# Simulate intent activation
+execute_statement(f"ACTIVATE intent_{intent}")
+
+# Simulate context handling
+execute_statement(f"SET_CONTEXT {context}")
+
+# Verify activation in logs
+activation_logs = [log for log in state["logs"] if f"intent_{intent}" in log]
+assert (len(activation_logs) > 0) == expected
+
+Test Imagination States
+
+@pytest.mark.parametrize("case", load_benchmark_dataset()["imagination_states"]) def test_imagination_states(case): topic = case["topic"] expected_pattern = case["expected_pattern"]
+
+# Simulate imagination state activation
+execute_statement(f"ACTIVATE imagination_{topic}")
+
+# Check logs
+pattern_logs = [log for log in state["logs"] if expected_pattern in log]
+assert len(pattern_logs) > 0
+
+Test Problem-Solving Loops
+
+@pytest.mark.parametrize("case", load_benchmark_dataset()["problem_solving_loops"]) def test_problem_solving_loops(case): problem = case["problem"] iterations = case["iterations"] expected_outcome = case["expected_outcome"]
+
+for i in range(iterations):
+    execute_statement("SWITCHMODE D")
+    execute_statement(f"ACTIVATE intent_focus")
+    execute_statement(f"ACTIVATE imagination_{problem}")
+    execute_statement("CHECKFIDELITY QNL1 0.75")
+
+# Check expected outcome in logs
+outcome_logs = [log for log in state["logs"] if expected_outcome in log]
+assert len(outcome_logs) > 0
+
+if name == "main": pytest.main(["-v", "tests/iai_ips_pytest_harness.py"])
+
