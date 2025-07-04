@@ -1,0 +1,68 @@
+# IAI-IPS Symbolic Cognition System README (Updated)
+
+## Overview
+
+The IAI-IPS Symbolic Cognition System enables quantum-neural hybrid computation using declarative symbolic dialectics. It is designed for bridging cognitive architectures in UBCI/SynapseLink systems.
+
+## Key Features
+
+* Declarative symbolic language for entanglement-based cognition.
+* Quantum state management and coherence control.
+* Neural activation and pattern integration.
+* Logos ↔ Pathos Twine cognition orchestration.
+* Supports layered contradiction analysis.
+* Ready for quantum hardware and BCI signal extensions.
+
+## Repository Structure
+
+* `core/`: Interpreter and symbolic engine modules.
+* `docs/`: Architecture diagrams, LaTeX papers.
+* `tests/`: Symbolic test pipelines.
+* `data/`: Symbolic test datasets.
+
+## Usage Example
+
+```python
+from iai_ips_symbolic_system import execute_statement
+
+statements = [
+    "DECLARE QuantumNeuralLink Q1",
+    "ENTANGLE Q1 Q2",
+    "MEASURE Q1",
+    "ACTIVATE focus_pattern",
+    "SWITCHMODE P"
+]
+
+for stmt in statements:
+    execute_statement(stmt)
+```
+
+## Symbol Table
+
+| Symbol          | Description             |
+| --------------- | ----------------------- |
+| PSI\_C / PSI\_D | Coherence / Decoherence |
+| NABLA\_I        | Internal contradiction  |
+| L\_ERROR        | Logos error signal      |
+| M\_UNEASE       | Pathos unease signal    |
+| D / G / H / P   | Learning modes          |
+
+## Testing
+
+Run:
+
+```bash
+python -m tests.run_all
+```
+
+## License
+
+MIT
+
+## Citation
+
+Tinio, A. (2025). IAI-IPS Symbolic Cognition System. [https://github.com/YourRepoLink](https://github.com/YourRepoLink)
+
+---
+
+For collaboration, open an issue or contact via lab channels.
