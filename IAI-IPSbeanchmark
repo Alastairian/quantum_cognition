@@ -1,0 +1,5 @@
+{ "intent_patterns": [ { "intent": "focus_on_entanglement", "context": "high_attention_level", "expected_activation": true }, { "intent": "relaxation_mode", "context": "low_attention_level", "expected_activation": true }, { "intent": "baseline_mode", "context": "neutral_attention_level", "expected_activation": false } ],
+
+"imagination_states": [ { "topic": "quantum_information_transfer", "expected_pattern": "imagination_quantum_information_transfer" }, { "topic": "neural_adaptation", "expected_pattern": "imagination_neural_adaptation" }, { "topic": "cognitive_symbiosis", "expected_pattern": "imagination_cognitive_symbiosis" } ],
+
+"problem_solving_loops": [ { "problem": "maximize_entanglement_fidelity", "iterations": 5, "expected_outcome": "fidelity_above_0.85" }, { "problem": "reduce_decoherence", "iterations": 3, "expected_outcome": "decoherence_below_threshold" }, { "problem": "stabilize_attention_patterns", "iterations": 4, "expected_outcome": "stable_attention_cycle" } ] }
