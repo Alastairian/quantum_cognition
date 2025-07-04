@@ -1,0 +1,3 @@
+- name: Run IAI-IPS Consciousness Benchmark Tests with Coverage
+      run: |
+        pytest -v --cov=iai_ips_code_scaffold tests/ > benchmark_test_report.log
